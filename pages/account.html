@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style4.css">
+</head>
+<body>
+    
+    <header class=" container ">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand logo" href="../index.html"> MOvie Haven</a>
+        
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/categories.html">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/celebrities.html">Celebrities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/celebrities.html">Account</a></li>
+                    </ul>
+                   
+                    <form class="d-flex email-box ">
+                        <input class="form-control email-input" type="email" placeholder="Enter your email" aria-label="Search">
+                        <button class="btn btn-search email-btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        </header>
+
+
+        <main>
+ 
+            <div class="container account-container">
+                <div class="row w-100">
+                 
+                    <div class="col-md-5 text-center">
+                        <img src="https://chisellabs.com/glossary/wp-content/uploads/2023/05/962b45f9-e2a6-4f59-8f0a-9e1e1a1d1f7f.png" alt="Profile Picture" class="profile-img">
+
+                         <div class="col-md-5 text-center">
+                            <img src="https://cdn.pixabay.com/photo/2021/07/21/12/50/website-6482988_640.png" alt="" class="profile-img">
+                        </div>
+
+                            <img src="https://cdn.pixabay.com/photo/2017/09/29/23/41/user-satisfaction-2800863_1280.png" alt="" class="profile-img">
+                    </div>
+            
+                   
+                    <div class="col-md-6">
+                        <div class="form-container divee">
+                            <h3 class="text-center textt">Account Information</h3>
+                            <form id="account-form">
+                                <div class="mb-2">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Account Type</label>
+                                    <input type="text" class="form-control" id="accountType">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Joined Date</label>
+                                    <input type="text" class="form-control" id="joinedDate" readonly>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-warning" onclick="enableEditing()">Edit</button>
+                                    <button type="button" class="btn btn-success" id="save-btn" onclick="saveAccountInfo()">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="container mt-5 comment-section">
+                <div class="comment-box bg-white divee">
+                    <h3 class="text-center textt">User Reviews</h3>
+                    <ul class="list-group mb-3" id="comments-list"></ul>
+            
+                    <div class="input-group">
+                        <input type="text" class="form-control comment-input" id="comment-input" placeholder="Add a comment...">
+                        <button class="btn btn-warning mt-2" onclick="addComment()">Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+        
+
+        </main>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>About us: This is a movie site that helps you choose <br>your favorite movie and  your favorite celebrity and current movies.</p>
+                        <p>Email: <a href="mailto:info@moviehaven.com">info@moviehaven.com</a></p>
+                        <p>Phone: +9821-12345678</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Celebrities</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p class="p4" >&copy; 2025 Movie Haven. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../assets/javascript/account.js"></script>
+</body>
+</html>
